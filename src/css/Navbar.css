@@ -1,0 +1,98 @@
+.navbar {
+  position: fixed;          /* stays at top */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* margin-right: 30px; */
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;            /* stays above other elements */
+}
+
+/* Left Section */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.navbar-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4491e8;
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.admin-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* Logout button (simple text with underline hover) */
+.logout-btn {
+  background: none;
+  border: none;
+  color: #000;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 0;
+  position: relative;
+}
+
+.logout-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+.logout-btn:hover::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-name {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-name {
+    display: none;
+  }
+
+  /* 👇 Shift logo + title to right */
+  .navbar-left {
+    margin-left: 30px;   /* adjust px as per your need */
+  }
+}

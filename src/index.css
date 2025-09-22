@@ -1,0 +1,28 @@
+/* --- Global Resets & Foundational Styles --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* This is a critical rule for predictable layouts */
+}
+
+/* Remove default margin from the body */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff; /* Sets a consistent background color */
+}
+
+/* Ensure the app's root container takes up the full viewport height */
+html, body, #root {
+  height: 100%;
+}
+
+/* Optional: Code block styling */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

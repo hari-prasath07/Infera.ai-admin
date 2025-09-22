@@ -1,0 +1,111 @@
+/* Sidebar Base */
+.sidebar {
+  width: 300px;
+  background: #fff;
+  border-right: 1px solid #ddd;
+  height: calc(100vh - 60px); 
+  position: fixed;
+  top: 60px;
+  left: 0;
+  transition: transform 0.3s ease-in-out;
+  padding-left: 50px;
+  justify-content: center;
+  align-items: center;
+
+  /* 👇 scrollability */
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;      /* Firefox slim scrollbar */
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #bbb;
+  border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}
+
+.menu {
+  padding-top: 50px;
+}
+
+/* Sidebar Menu */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li a {
+  font-size: 17px;
+  font-weight: 500;
+  padding: 20px 0;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;   /* 👈 keeps underline close to text */
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  transition: color 0.7s ease;
+}
+
+/* Hover underline just below the text */
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;                /* directly under text */
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: hsl(0, 0%, 0%);   /* solid black line */
+  transition: width 0.7s ease;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+.menu li:hover {
+  color: #000000;
+}
+
+/* Mobile Toggle Button */
+.mobile-toggle {
+  display: none;
+  position: fixed;
+  padding-top: 20px;
+  top: 0px;
+  left: 15px;
+  z-index: 1001;
+  cursor: pointer;
+  color: black;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    justify-content: flex-start;
+    padding-top: 40px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .mobile-toggle {
+    display: block;
+  }
+}
+
+.li {
+  color: black;
+}

@@ -1,0 +1,357 @@
+/* ================= Container ================= */
+.container {
+  padding: 20px;
+  padding-left: 40px;
+  /* margin-left: 230px; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* box-sizing: border-box; */
+  /* background: #ffffff; */
+}
+
+/* ================= Header ================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.header h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.add-btn {
+  padding: 8px 15px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: #153072;
+}
+
+.subtitle {
+  margin-top: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+/* ================= Filter ================= */
+.filter-select {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  color: black;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  background: #fff;
+  transition: border 0.2s ease;
+}
+
+.filter-select:hover {
+  border-color: #1e3a8a;
+}
+
+/* ================= Grid ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ================= Card ================= */
+.card {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.card .desc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+/* Card Meta */
+/* Card Meta */
+.meta {
+  display: flex;
+  justify-content: flex-start; /* align to left */
+  align-items: center;
+  gap: 80px; /* space between status and other info */
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* Status Colors */
+.status-live {
+  color: green;
+  font-weight: bold;
+}
+
+.status-new {
+  color: blue;
+  font-weight: bold;
+}
+
+.status-beta {
+  color: red;
+  font-weight: bold;
+}
+
+/* Domain Badges */
+.domain-badge {
+  display: inline-block;
+  padding: 4px 9px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.domain-AI { background: #1e3a8a; }
+.domain-ML { background: #f59e0b; }
+.domain-Cloud { background: #10b981; }
+.domain-Web-Dev { background: #6366f1; }
+
+/* ================= Card Actions ================= */
+.actions {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.edit-btn,
+.action-btn {
+  flex: 1;                 /* equal width */
+  display: flex;           /* center text */
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.edit-btn {
+  background: #000;
+  color: #fff;
+}
+
+.action-btn {
+  background: #1e3a8a;
+  color: #fff;
+}
+
+.action-btn:hover {
+  background: #153072;
+}
+
+/* ================= Overlay / Form ================= */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.product-form {
+  width: 450px;
+  max-width: 100%;
+  background: #ffffff;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.product-form h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  color: black;
+}
+
+.product-form label {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.product-form input,
+.product-form textarea,
+.product-form select {
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fafafa;
+  color: #000;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.product-form input:focus,
+.product-form textarea:focus,
+.product-form select:focus {
+  border-color: #1e3a8a;
+  background: #bfccf0;
+  outline: none;
+}
+
+.product-form textarea {
+  resize: vertical;
+  min-height: 50px;
+  color: black;
+}
+
+/* Form Buttons */
+.product-form .form-buttons {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.product-form .form-buttons button {
+  flex: 1; /* equal width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.product-form .form-buttons button[type="submit"] {
+  background: #1e3a8a;
+  color: #fff;
+}
+
+.product-form .form-buttons button[type="submit"]:hover {
+  background: #153072;
+}
+
+.product-form .form-buttons button[type="button"] {
+  background: #ccc;
+  color: #000;
+}
+
+.product-form .form-buttons button[type="button"]:hover {
+  background: #999;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.3);
+  color: #000;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .add-btn,
+  .filter-select {
+    width: 100%;
+  }
+
+  .filter-select {
+    margin-bottom: 10px;
+  }
+
+  .product-form {
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 8px;
+  }
+
+  .product-form h2 {
+    font-size: 16px;
+  }
+
+  .product-form .form-buttons button {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .actions {
+    flex-direction: column; /* stack buttons */
+  }
+}
